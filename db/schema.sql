@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS chatea_db;
+CREATE DATABASE chatea_db;
