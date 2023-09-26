@@ -8,12 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const email = document.getElementById("email-login").value;
     const password = document.getElementById("password-login").value;
-
-
- 
+    
       try {
-        //VERIES AUTHENTICIT AND ALL THAT
-        const response = await fetch('/login', {    //<------------------------- dont forget this probably not done
+     
+        const response = await fetch('/login', {    
           method: "POST",
           headers: {
             "Content-Type": "application/json",
