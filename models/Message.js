@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 class Message extends Model { }
 
 Message.init({
-    message_id: {
+    id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
@@ -20,16 +20,14 @@ Message.init({
     },
     user_id: {
         type: DataTypes.INTEGER,
-        allowNull: true,
         references: {
-            model: 'users',
-            key: 'user_id'
+            model: 'user',
+            key: 'id'
         }
     }
 }, {
     sequelize,
-    modelName: "message",
-    timestamps: true
+    modelName: "message"
 });
 
 module.exports = Message;
