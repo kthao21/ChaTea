@@ -14,21 +14,21 @@
     </form>
   </div>
 
-    {{#each user.list as |user.list|}}
       <div class="user-list">
         <h1>Your Friend List</h1>
-    <h2>{{user.list}}</h2>
-        
+        {{#each user.list as |user|}}
+    <h2>{{user}}</h2>
+        {{/each}}
       </div>
   </div>
-    {{/each}}
+    
   </div>
   {{/if}}
 </div>
 
 <script src="/public/js/profile.js"></script>
 
-{{{body}}}
+{{> chatbox}}
 
 
 
