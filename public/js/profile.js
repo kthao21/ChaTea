@@ -1,14 +1,11 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#project-name').value.trim();
-    const needed_funding = document.querySelector('#project-funding').value.trim();
-    const description = document.querySelector('#project-desc').value.trim();
-  
+    const username = document.querySelector('.user-name').value.trim();
     if (user.name) {
       const response = await fetch(`/api/user`, {
         method: 'POST',
-        body: JSON.stringify({ username}),
+        body: JSON.stringify({username}),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -33,7 +30,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-        alert('Remove USer');
+        alert('Remove User');
       }
     }
   };
