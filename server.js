@@ -1,10 +1,19 @@
-const express = require('express');
-const app = express();
-const expbs = require('express-handlebars');
+
 const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
+const helpers = require('./utils/helpers');
 
+const sequelize = require('./config/connection');
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+const hbs = exphbs.create({})
+app.engine('handlebars', exphbs)
 app.set('view engine', 'handlebars');
 
 
@@ -12,39 +21,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(routes)
 
 
-app.get('/', (req, res) => {
-
-
-  res.render('home', { title: 'ChaTea' });
-});
-
-
-app.get('/', (req, res) => {
-    res.render('home'); //Displays home
-  });
- 
-  //Displays login
-app.get('/login', (req, res) => {
-    res.render('login');
-  });
-
-
-  //Login form submission
-  app.post('/login', (req, res) => {
-  });
-
-
-  //Logout route
-  app.get('/logout', (req, res) => {
-  });
- 
-  //Fetches user data
-  app.get('/profile', (req, res) => {
-    const userData = {};
-    res.render('profile', { userData });
-  });
  
 //Displays chat room
 app.get('/chat/:roomId', (req, res) => {
@@ -62,6 +41,7 @@ app.get('/chat/:roomId', (req, res) => {
  
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log('Sever is starting at port', 3001)
+    sequelize.sync({force:false})
 });
