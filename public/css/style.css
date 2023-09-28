@@ -12,3 +12,30 @@
     top: 200px;
     left: 60px;
  }
+
+ .user-list {
+    position: relative;
+    top: 25px;
+    left: 25px;
+ }
+
+ .search-form {
+    position: relative;
+    top: 170px;
+    left: 25px;
+
+ }
+
+ #chat-container {
+    width: 70%;
+    position: relative;
+    left: 400px;
+    height: 90%;
+ }
+ 
+ #send-btn{
+    position: relative;
+    left: 40px;
+    right: 40px;
+ }
+
