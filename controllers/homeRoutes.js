@@ -1,4 +1,5 @@
 const router = require("express").Router()
+const { User } = require("../models");
 const withAuth = require("../utils/auth");
 router.get('/', (req, res) => {
 
@@ -12,8 +13,10 @@ router.get('/', (req, res) => {
     });
    
     //Fetches user data
-    router.get('/profile', withAuth, (req, res) => {
-      const userData = {};
-      res.render('profile', { userData });
+    router.get('/profile', withAuth, async (req, res) => {
+      const userData = await User.findAll();
+      const users = userData.map((user)=>user.get({plain: true}))
+      res.render('profile', { users });
     });
     module.exports = router
+
