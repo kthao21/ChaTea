@@ -1,5 +1,5 @@
 // client-side js for socket connection
-import io from 'socket.io-client';
+import io from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js';
 
 const socket = io("https://morning-spire-89765-733c4b62d1d7.herokuapp.com/");
 const chatContainer = document.getElementById("chat-container");
