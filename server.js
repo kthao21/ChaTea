@@ -57,7 +57,7 @@ sequelize.sync({ force: false }).then(() => {
   //   setting up socket.io connection
   io.on("connection", (socket) => {
     socket.on("send-message", (message) => {
-      socket.broadcast.emit("chat-message", message);
+        io.emit("chat-message", message);
     });
   });
 });
