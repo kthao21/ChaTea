@@ -1,10 +1,12 @@
-</html>
+<html>
 <!doctype html>
 <html lang="en">
   <head>
      <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatea!</title>
+  <script defer src="http://localhost:3001/socket.io/socket.io.js"></script>
+  <script defer src="/js/script.js"></script>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -16,7 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <header class="logo">
 
-        <div class="img" src="/img/ChaTeaLogo.jpg"></div>
+        <img class="img" src="/img/ChaTea Logo.jpg">
         <h1 id="heading">Chatea</h1>
       <nav>
         {{#if logged_in}}
@@ -37,10 +39,9 @@
         <h1>Call us</h1>
       </div>
     </footer>
-  </div>
 
   {{#if logged_in}}
-  <script src="/public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 
