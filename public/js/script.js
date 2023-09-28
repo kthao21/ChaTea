@@ -1,9 +1,9 @@
 // client-side js for socket connection
-import io from 'socket.io-client';
 const socket = io("https://morning-spire-89765-733c4b62d1d7.herokuapp.com/");
 const chatContainer = document.getElementById("chat-container");
 const sendContainer = document.getElementById("send-msg");
 const messageText = document.getElementById("msg-input");
+const io = require('socket.io-client');
 
 socket.on("chat-message", (data) => {
   appendChat(data);
