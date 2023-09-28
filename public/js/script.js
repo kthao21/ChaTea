@@ -1,5 +1,5 @@
 // client-side js for socket connection
-const socket = io("http://localhost:3001");
+const socket = io("https://morning-spire-89765-733c4b62d1d7.herokuapp.com/");
 const chatContainer = document.getElementById("chat-container");
 const sendContainer = document.getElementById("send-msg");
 const messageText = document.getElementById("msg-input");
