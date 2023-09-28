@@ -38,6 +38,9 @@ app.get("/chat/:roomId", (req, res) => {
   res.render("chat", { chatData });
 });
 
+const server = app.listen(PORT, () => console.log("Now listening"));
+const io = require("socket.io")(server);
+
 app.post("/chat/:roomId/send", (req, res) => {
   const roomId = req.params.roomId;
   const messageText = req.body.message;
@@ -51,13 +54,10 @@ app.post("/chat/:roomId/send", (req, res) => {
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  const server = app.listen(PORT, () => console.log("Now listening"));
-  const io = require("socket.io")(server);
-
-  //   setting up socket.io connection
+  // setting up socket.io connection
   io.on("connection", (socket) => {
     socket.on("send-message", (message) => {
-        io.emit("chat-message", message);
+      io.emit("chat-message", message);
     });
   });
 });
