@@ -1,11 +1,11 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('.user-name').value.trim();
-    if (user.name) {
-      const response = await fetch(`/api/user`, {
+    const firstName = document.querySelector('.firstName').value.trim();
+    if (firstName) {
+      const response = await fetch(`/api/users`, {
         method: 'POST',
-        body: JSON.stringify({username}),
+        body: JSON.stringify({firstName}),
         headers: {
           'Content-Type': 'application/json',
         },
