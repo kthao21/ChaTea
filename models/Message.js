@@ -1,9 +1,14 @@
-const { Sequelize } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require('../config/connection');
 
-const Message = sequelize.define('Message', {
-    message_id: {
-        type: DataTypes.STRING,
-        allowNull: false
+class Message extends Model { }
+
+Message.init({
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
     },
     message: {
         type: DataTypes.STRING,
@@ -14,9 +19,15 @@ const Message = sequelize.define('Message', {
         allowNull: false
     },
     user_id: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
     }
+}, {
+    sequelize,
+    modelName: "message"
 });
 
 module.exports = Message;
