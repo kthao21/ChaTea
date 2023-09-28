@@ -1,27 +1,18 @@
 const router = require("express").Router()
+const withAuth = require("../utils/auth");
 router.get('/', (req, res) => {
 
 
-    res.render('home', { title: 'ChaTea' });
+    res.render('homepage', { title: 'ChaTea' });
   });
    
     //Displays login
   router.get('/login', (req, res) => {
       res.render('login');
     });
-  
-  
-    //Login form submission
-    router.post('/login', (req, res) => {
-    });
-  
-  
-    //Logout route
-    router.get('/logout', (req, res) => {
-    });
    
     //Fetches user data
-    router.get('/profile', (req, res) => {
+    router.get('/profile', withAuth, (req, res) => {
       const userData = {};
       res.render('profile', { userData });
     });
