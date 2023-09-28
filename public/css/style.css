@@ -1,0 +1,14 @@
+
+.form-group {
+    color: black;
+    margin: 5px;
+    position: relative;
+    height: 10%;
+    top: 60px;
+}
+
+ .col-md-6 {
+    position: relative;
+    top: 200px;
+    left: 60px;
+ }
