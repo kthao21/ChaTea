@@ -1,6 +1,6 @@
 
   <div class="greet">
-    <h2>Welcome, {{username}},  Lets Chat!</h2>
+    <h2>Welcome, {{firstName}},  Lets Chat!</h2>
   </div>
 
     <form class="add-new-user">
@@ -15,8 +15,8 @@
     
       <div class="user-list">
         <h1>Your Friend List</h1>  
-        {{#each firstName as |firstName|}}
-    <h2>{{firstName}}</h2>
+        {{#each users as |user|}}
+    <h2>{{user.firstName}}</h2>
         {{/each}}
       </div>
 
