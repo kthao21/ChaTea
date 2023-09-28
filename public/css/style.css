@@ -15,27 +15,37 @@
 
  .user-list {
     position: relative;
-    top: 60px;
-    left: 25px;
- }
-
- .search-form {
-    position: relative;
-    top: 210px;
-    left: 25px;
-
+    top: 120px;
+    left: 50px;
+    
  }
 
  #chat-container {
     width: 70%;
-    position: relative;
+    position: fixed;
+    bottom: 220px;
     left: 400px;
-    height: 90%;
+    height: 50%;
  }
  
  #send-btn{
-    position: relative;
-    left: 40px;
+    position: fixed;
+    left: 454px;
     right: 40px;
+    bottom: 159px;
+    width: 100px;
+    border: none;
  }
 
+ #send-msg {
+   position: fixed;
+   top: 600px;
+   left: 450px;
+   width: 500px;
+ }
+
+ .user-list h1 {
+   font-size: 30px;
+   text-decoration: underline;
+   
+ }

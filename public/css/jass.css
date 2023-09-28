@@ -38,5 +38,7 @@ img{
 
 .greet {
     position: relative;
-    top: 140px;
+    top: 170px;
+    left: 65px;
+    font-size: medium;
 }
