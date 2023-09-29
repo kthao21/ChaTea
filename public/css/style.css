@@ -14,7 +14,7 @@
  }
 
  .user-list {
-    position: relative;
+    position: fixed;
     top: 60px;
     left: 25px;
  }
