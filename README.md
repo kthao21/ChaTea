@@ -13,7 +13,6 @@ As a user, I would like an application that will allow me to send and recieve me
 [credits](#credits)
 [license](#license)
 [features](#features)
-[test](#test)
     
 ## Installation <a name="installation"></a>
 
@@ -45,8 +44,4 @@ MIT license
 
 ## Features <a name="features"></a>
 
-- Ability to chat one on one
-
-## Tests <a name="test"></a>
-
-To test this application, follow instructions listed in the Install and Usage sections of the README.
+- Ability to chat with online users
