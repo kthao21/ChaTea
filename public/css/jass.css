@@ -1,42 +1,42 @@
 header {
-    width: 100%;
-    font-size: larger;
-    position: fixed;
-    background: skyblue;
-    padding: 10px;
-    color: white;
-    z-index: 500px;
+  width: 100%;
+  font-size: larger;
+  position: fixed;
+  background: skyblue;
+  padding: 10px;
+  color: white;
+  z-index: 500px;
 }
 
 body {
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-    margin-top: auto;
-    background-color: rgb(102, 171, 224);
-    width: 100%;
-    color: white;
-    text-align: center;
+  margin-top: auto;
+  background-color: rgb(102, 171, 224);
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .contact-info h1 {
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-img{
- height: 120px;
- width:160px;
- border: 10px;
- border-radius: 50%;
- padding: 10px;
+img {
+  height: 120px;
+  width: 160px;
+  border: 10px;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .greet {
-    position: relative;
-    top: 140px;
+  position: relative;
+  top: 140px;
 }
